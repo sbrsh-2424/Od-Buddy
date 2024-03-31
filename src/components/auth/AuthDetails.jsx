@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { auth } from "../../LoginPage";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useState } from "react";
+import './AuthDetails.css'
+import './responsive.css'
 
 const AuthDetails = () => {
   const [authUser, setAuthUser] = useState(null);
@@ -26,8 +28,8 @@ const AuthDetails = () => {
     }).catch(error => console.log(error))
   }
   return (
-    <div>
-      {authUser ? <><p>Signed in as {authUser.email}</p><button onClick={userSignOut}>Sign Out</button></> : <p>Signed Out</p>}
+    <div className="auth">
+      {authUser ? <><p>Signed in as {authUser.email}</p><button onClick={userSignOut}>SIGN OUT</button></> : <p>Signed Out</p>}
     </div>
   );
 };

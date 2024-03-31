@@ -1,6 +1,9 @@
 import {signInWithEmailAndPassword} from "firebase/auth"
 import React, { useState } from "react";
 import { auth } from "../../LoginPage";
+import './SignIn.css'
+import './responsive.css'
+import logo from './OD-Logo.png'
 
 const Signin = () => {
   const [email, setEmail] = useState("");
@@ -19,7 +22,7 @@ const Signin = () => {
   return (
     <div className="sign-in-container">
       <form onSubmit={signIn}>
-        <h1>Log In</h1>
+        <img src={logo} alt="logo"></img>
         <input
           type="email"
           placeholder="Enter your email"
@@ -32,7 +35,7 @@ const Signin = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Log In</button>
+        <button type="submit">LOG IN</button>
       </form>
     </div>
   );
