@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { auth } from "../../LoginPage";
 import './SignIn.css'
 import './responsive.css'
-import logo from './OD-Logo.png'
+import logo from '../../OD-Logo.png'
 
 const Signin = () => {
   const [email, setEmail] = useState("");
